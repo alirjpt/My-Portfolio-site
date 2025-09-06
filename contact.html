@@ -138,13 +138,13 @@
     /* Mobile Responsive Design */
     @media (max-width: 992px) {
       .contact-section {
-        padding: clamp(60px, 8vw, 100px) 0;
+        padding: clamp(50px, 6vw, 80px) 0;
         max-width: 100%;
         margin: 0 auto;
       }
       
       .contact-header {
-        margin-bottom: clamp(40px, 6vw, 60px);
+        margin-bottom: clamp(35px, 5vw, 50px);
         padding: 0 clamp(20px, 3vw, 40px);
       }
       
@@ -156,39 +156,42 @@
       .contact-intro {
         font-size: clamp(1rem, 2.5vw, 1.2rem);
         padding: 0 clamp(10px, 2vw, 20px);
+        line-height: 1.6;
       }
       
       .contact-details-grid {
         grid-template-columns: 1fr;
-        gap: clamp(20px, 3vw, 25px);
+        gap: clamp(18px, 2.5vw, 22px);
         padding: 0 clamp(20px, 3vw, 40px);
       }
     }
     
     @media (max-width: 768px) {
       .contact-section {
-        padding: 50px 0;
+        padding: 40px 0;
       }
       
       .contact-header {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         padding: 0 20px;
       }
       
       .contact-heading {
         font-size: clamp(2rem, 8vw, 2.5rem);
         text-align: center;
+        margin-bottom: 15px;
       }
       
       .contact-intro {
         font-size: clamp(0.95rem, 3vw, 1.1rem);
         text-align: center;
         padding: 0 15px;
+        line-height: 1.5;
       }
       
       .contact-details-grid {
         padding: 0 20px;
-        gap: 20px;
+        gap: 18px;
       }
       
       .contact-item {
@@ -196,6 +199,8 @@
         flex-direction: column;
         text-align: center;
         gap: 15px;
+        min-height: 120px;
+        border-radius: 10px;
       }
       
       .contact-icon {
@@ -212,33 +217,38 @@
       
       .contact-label {
         font-size: 0.9rem;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
       }
       
       .contact-link {
         font-size: clamp(1rem, 3vw, 1.2rem);
         word-break: break-all;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
     
     @media (max-width: 576px) {
       .contact-section {
-        padding: 40px 0;
+        padding: 35px 0;
       }
       
       .contact-header {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         padding: 0 15px;
       }
       
       .contact-heading {
         font-size: clamp(1.8rem, 9vw, 2.2rem);
-        margin-bottom: 15px;
+        margin-bottom: 12px;
       }
       
       .contact-intro {
         font-size: 0.95rem;
         padding: 0 10px;
+        line-height: 1.4;
       }
       
       .contact-details-grid {
@@ -247,8 +257,9 @@
       }
       
       .contact-item {
-        padding: 15px;
+        padding: 18px;
         gap: 12px;
+        min-height: 110px;
       }
       
       .contact-icon {
@@ -259,10 +270,12 @@
       
       .contact-label {
         font-size: 0.85rem;
+        margin-bottom: 6px;
       }
       
       .contact-link {
         font-size: 0.95rem;
+        min-height: 42px;
       }
     }
     

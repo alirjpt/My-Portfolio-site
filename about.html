@@ -224,13 +224,13 @@
     
     /* About Page Styles - Mobile Optimized */
     .modern-about {
-      padding: clamp(40px, 5vw, 80px) 0;
+      padding: clamp(20px, 3vw, 40px) 0;
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 5vw, 80px);
-      min-height: 80vh;
+      gap: clamp(30px, 4vw, 60px);
+      min-height: 70vh;
       align-items: center;
       height: auto;
     }
@@ -246,7 +246,7 @@
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: clamp(30px, 4vw, 50px);
+      margin-bottom: clamp(20px, 3vw, 30px);
       letter-spacing: 2px;
       background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
       -webkit-background-clip: text;
@@ -258,14 +258,14 @@
     .about-divider {
       height: 1px;
       background-color: rgba(255, 255, 255, 0.1);
-      margin: clamp(20px, 3vw, 40px) 0;
+      margin: clamp(15px, 2vw, 25px) 0;
       width: 100%;
     }
     
     .about-text {
       font-size: clamp(1.1rem, 1.2vw, 1.2rem);
-      line-height: 1.8;
-      margin-bottom: clamp(20px, 2vw, 30px);
+      line-height: 1.7;
+      margin-bottom: clamp(15px, 2vw, 20px);
       color: var(--text-color);
     }
     
@@ -276,7 +276,7 @@
       text-decoration: none;
       color: var(--text-color);
       font-size: clamp(1rem, 1.1vw, 1.1rem);
-      margin-top: clamp(15px, 2vw, 20px);
+      margin-top: clamp(10px, 1.5vw, 15px);
       transition: transform 0.3s ease;
       padding: 12px 20px;
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -310,24 +310,25 @@
     @media (max-width: 992px) {
       .modern-about {
         grid-template-columns: 1fr;
-        gap: clamp(30px, 4vw, 40px);
-        padding: clamp(30px, 4vw, 60px) clamp(15px, 3vw, 20px);
+        gap: clamp(25px, 3vw, 35px);
+        padding: clamp(20px, 3vw, 40px) clamp(15px, 3vw, 20px);
         min-height: auto;
       }
       
       .about-heading {
         font-size: clamp(2.5rem, 8vw, 3.5rem);
-        margin-bottom: clamp(20px, 3vw, 30px);
+        margin-bottom: clamp(15px, 2vw, 25px);
       }
       
       .about-text {
         font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-        line-height: 1.7;
+        line-height: 1.6;
+        margin-bottom: clamp(12px, 1.5vw, 18px);
       }
       
       .about-right {
         order: -1;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
       
       .about-left {
@@ -336,61 +337,64 @@
       
       .about-image {
         max-width: 100%;
-        height: clamp(300px, 50vw, 400px);
+        height: clamp(280px, 45vw, 380px);
         object-fit: cover;
       }
     }
     
     @media (max-width: 768px) {
       .modern-about {
-        padding: 30px 20px;
-        gap: 30px;
+        padding: 25px 20px;
+        gap: 25px;
       }
       
       .about-heading {
         font-size: clamp(2rem, 8vw, 2.8rem);
         text-align: center;
+        margin-bottom: 15px;
       }
       
       .about-text {
         font-size: clamp(1rem, 3vw, 1.2rem);
         text-align: center;
+        margin-bottom: 12px;
       }
       
       .cv-link {
         width: 100%;
         justify-content: center;
-        margin-top: 25px;
-        padding: 15px 25px;
-        font-size: 1.1rem;
+        margin-top: 15px;
+        padding: 12px 20px;
+        font-size: 1rem;
       }
     }
     
     @media (max-width: 576px) {
       .modern-about {
-        padding: 25px 15px;
-        gap: 25px;
+        padding: 20px 15px;
+        gap: 20px;
       }
       
       .about-heading {
         font-size: clamp(1.8rem, 9vw, 2.5rem);
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         letter-spacing: 1px;
       }
       
       .about-text {
         font-size: clamp(0.95rem, 3.5vw, 1.1rem);
         line-height: 1.6;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
       }
       
       .about-image {
-        height: clamp(250px, 60vw, 350px);
+        height: clamp(220px, 55vw, 320px);
       }
       
       .cv-link {
-        padding: 12px 20px;
-        font-size: 1rem;
+        padding: 10px 18px;
+        font-size: 0.95rem;
+        margin-top: 12px;
       }
     }
     
@@ -576,22 +580,14 @@
         <h1 class="about-heading">ABOUT</h1>
         <div class="about-divider"></div>
         <div class="about-text">
-          Hi, I'm Ali Nawaz, a Cloud Engineer passionate about designing secure, scalable, and cost-efficient infrastructure. I work with AWS services like EC2, S3, IAM, VPC, RDS, and Route 53, and I use tools such as Terraform, Docker, and GitHub Actions to automate deployments and maintain reliability.
+          Hi, I'm Ali Nawaz, a Cloud Engineer passionate about designing secure, scalable, and cost-efficient infrastructure. I work with AWS services like EC2, S3, IAM, VPC, RDS, and Route 53, using tools such as Terraform, Docker, and GitHub Actions to automate deployments and maintain reliability.
         </div>
         <div class="about-text">
-          I enjoy solving problems, building practical solutions, and continuously learning new technologies to stay ahead in the cloud space. My focus is always on creating systems that are simple, reliable, and aligned with business goals.
+          I enjoy solving problems, building practical solutions, and continuously learning new technologies. When I'm not working in the cloud, you'll find me gaming or traveling, both of which keep me sharp, curious, and inspired.
         </div>
-        <div class="about-text">
-          When I'm not working in the cloud, you'll probably find me gaming or traveling both of which keep me sharp, curious, and inspired.
-        </div>
-        <div class="about-text">
-          I'm always excited to connect with fellow cloud enthusiasts, discuss new technologies, and explore opportunities to collaborate on innovative projects that push the boundaries of what's possible in the cloud.
-        </div>
-        <div class="cv-link-bottom-center">
-          <a href="assets/ALI_Resume.pdf" class="cv-link" download="ALI_Resume.pdf" aria-label="Download my curriculum vitae">
-            <i class="fas fa-arrow-down" aria-hidden="true"></i> curriculum vitae
-          </a>
-        </div>
+        <a href="assets/ALI_Resume.pdf" class="cv-link" download="ALI_Resume.pdf" aria-label="Download my curriculum vitae">
+          <i class="fas fa-arrow-down" aria-hidden="true"></i> curriculum vitae
+        </a>
       </div>
     </section>
   </div>
