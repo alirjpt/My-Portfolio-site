@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <title>About - Cloud Portfolio</title>
+  <meta name="description" content="Learn more about Ali Nawaz, a Cloud Engineer and Infrastructure Architect specializing in cloud solutions and DevOps practices">
+  <meta name="keywords" content="Cloud Engineer, DevOps, Linux, AWS, Azure, Infrastructure, Automation">
+  <meta name="author" content="Ali Nawaz">
+  <meta name="robots" content="index, follow">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Ali Nawaz - Cloud Engineer">
+  <meta name="twitter:description" content="Learn more about Ali Nawaz, a Cloud Engineer passionate about building efficient infrastructure and mastering automation">
+  <meta name="twitter:image" content="https://yourwebsite.com/profile-image.jpg">
+  <meta property="og:title" content="About Ali Nawaz - Cloud Engineer">
+  <meta property="og:description" content="Learn more about Ali Nawaz, a Cloud Engineer passionate about building efficient infrastructure and mastering automation">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/about.html">
+  <meta property="og:image" content="https://yourwebsite.com/profile-image.jpg">
+  <link rel="canonical" href="https://yourwebsite.com/about.html">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reset.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="animated-bg.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ali Nawaz",
+      "url": "https://yourwebsite.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/alinawaz08/",
+        "https://github.com/alirjpt"
+      ],
+      "jobTitle": "Cloud Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Self-employed"
+      },
+      "description": "Cloud Engineer in the making, passionate about building efficient infrastructure and mastering automation",
+      "skills": "Cloud Computing, Linux, DevOps, Automation, Infrastructure"
+    }
+  </script>
+  <style>
+    /* Prevent Flash of Unstyled Content */
+    html.loading {
+      visibility: hidden;
+      opacity: 0;
+    }
+    
+    /* Enhanced Page Transition Styles */
+    .page-transition-loader {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 9997;
+      pointer-events: none;
+      background-color: rgba(40, 42, 54, 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 30px 40px;
+      border-radius: 16px;
+      border: 1px solid rgba(149, 128, 255, 0.2);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2), 
+                  0 0 20px rgba(149, 128, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    /* Cloud logo animation for page transitions */
+    .transition-cloud-container {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px auto;
+      position: relative;
+    }
+    
+    .transition-cloud {
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/images/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: drop-shadow(0 0 8px rgba(149, 128, 255, 0.6));
+      animation: cloudFloat 2s infinite ease-in-out;
+    }
+    
+    .transition-particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      opacity: 0;
+      animation: particleFloat 2s infinite ease-out;
+    }
+    
+    .particle:nth-child(1) {
+      top: 25%;
+      left: -10%;
+      animation-delay: 0.2s;
+    }
+    
+    .particle:nth-child(2) {
+      top: 10%;
+      left: 20%;
+      animation-delay: 0.5s;
+    }
+    
+    .particle:nth-child(3) {
+      top: 65%;
+      left: 10%;
+      animation-delay: 0.1s;
+    }
+    
+    .particle:nth-child(4) {
+      top: 80%;
+      left: 30%;
+      animation-delay: 0.7s;
+    }
+    
+    .particle:nth-child(5) {
+      top: 20%;
+      left: 80%;
+      animation-delay: 0.3s;
+    }
+    
+    .particle:nth-child(6) {
+      top: 70%;
+      left: 85%;
+      animation-delay: 0.6s;
+    }
+    
+    .progress-bar-container {
+      width: 180px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      margin: 20px auto 15px auto;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      border-radius: 2px;
+      position: relative;
+      animation: loadProgress 2s infinite;
+    }
+    
+    .progress-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      animation: progressGlow 2s infinite;
+    }
+    
+    .page-loader-label {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--text-color);
+      font-family: 'Space Grotesk', sans-serif;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    
+    .page-loader-sublabel {
+      font-size: 12px;
+      color: rgba(var(--color-text-rgb), 0.6);
+      text-align: center;
+      margin-top: 8px;
+    }
+    
+    /* Animations */
+    @keyframes cloudFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-5px) scale(1.05); }
+    }
+    
+    @keyframes particleFloat {
+      0% { transform: translate(0, 0) scale(0); opacity: 0; }
+      20% { transform: translate(-5px, -5px) scale(1); opacity: 0.8; }
+      80% { transform: translate(-15px, -15px) scale(0.5); opacity: 0.4; }
+      100% { transform: translate(-20px, -20px) scale(0); opacity: 0; }
+    }
+    
+    @keyframes loadProgress {
+      0% { width: 0%; }
+      50% { width: 70%; }
+      80% { width: 85%; }
+      100% { width: 98%; }
+    }
+    
+    @keyframes progressGlow {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* About Page Styles - Mobile Optimized */
+    .modern-about {
+      padding: clamp(40px, 5vw, 80px) 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 5vw, 80px);
+      min-height: 80vh;
+      align-items: center;
+      height: auto;
+    }
+    
+    .about-left {
+      padding-right: clamp(20px, 3vw, 40px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .about-heading {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: clamp(30px, 4vw, 50px);
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    
+    .about-divider {
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: clamp(20px, 3vw, 40px) 0;
+      width: 100%;
+    }
+    
+    .about-text {
+      font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+      line-height: 1.8;
+      margin-bottom: clamp(20px, 2vw, 30px);
+      color: var(--text-color);
+    }
+    
+    .cv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: clamp(1rem, 1.1vw, 1.1rem);
+      margin-top: clamp(15px, 2vw, 20px);
+      transition: transform 0.3s ease;
+      padding: 12px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      align-self: flex-start;
+    }
+    
+    .cv-link:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    .about-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      display: block;
+      margin: 0 auto;
+    }
+    
+    /* Mobile Responsive Design */
+    @media (max-width: 992px) {
+      .modern-about {
+        grid-template-columns: 1fr;
+        gap: clamp(30px, 4vw, 40px);
+        padding: clamp(30px, 4vw, 60px) clamp(15px, 3vw, 20px);
+        min-height: auto;
+      }
+      
+      .about-heading {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        margin-bottom: clamp(20px, 3vw, 30px);
+      }
+      
+      .about-text {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        line-height: 1.7;
+      }
+      
+      .about-right {
+        order: -1;
+        margin-bottom: 20px;
+      }
+      
+      .about-left {
+        padding-right: 0;
+      }
+      
+      .about-image {
+        max-width: 100%;
+        height: clamp(300px, 50vw, 400px);
+        object-fit: cover;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .modern-about {
+        padding: 30px 20px;
+        gap: 30px;
+      }
+      
+      .about-heading {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        text-align: center;
+      }
+      
+      .about-text {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        text-align: center;
+      }
+      
+      .cv-link {
+        width: 100%;
+        justify-content: center;
+        margin-top: 25px;
+        padding: 15px 25px;
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .modern-about {
+        padding: 25px 15px;
+        gap: 25px;
+      }
+      
+      .about-heading {
+        font-size: clamp(1.8rem, 9vw, 2.5rem);
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+      
+      .about-text {
+        font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      
+      .about-image {
+        height: clamp(250px, 60vw, 350px);
+      }
+      
+      .cv-link {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .modern-about {
+        padding: 20px 10px;
+      }
+      
+      .about-heading {
+        font-size: 1.8rem;
+      }
+      
+      .about-text {
+        font-size: 0.95rem;
+      }
+    }
+    
+    /* Mobile-specific improvements */
+    .cv-link-bottom-center {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    /* Ensure proper text wrapping and readability */
+    .about-text {
+      word-wrap: break-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+    }
+    
+    /* Improve touch targets for mobile */
+    .cv-link {
+      min-height: 44px;
+      min-width: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Better spacing for mobile content */
+    @media (max-width: 768px) {
+      .about-divider {
+        margin: 15px 0;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .about-divider {
+        margin: 12px 0;
+      }
+    }
+    
+    /* Ensure container doesn't cause horizontal scroll */
+    .container {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
+    /* Force scrolling on about page */
+    body.about-page {
+      overflow-y: auto !important;
+      height: auto !important;
+      min-height: 100vh !important;
+    }
+    
+    html.about-page {
+      overflow-y: auto !important;
+      height: auto !important;
+    }
+    
+    /* Ensure about section has enough height to scroll */
+    .modern-about {
+      padding-bottom: 100px;
+    }
+  </style>
+  <script>
+    // Add loading class to prevent FOUC
+    document.documentElement.classList.add('loading');
+    
+    // Remove loading class when everything is loaded
+    window.addEventListener('load', function() {
+      document.documentElement.classList.remove('loading');
+      
+      // Force scrolling on about page
+      document.documentElement.classList.add('about-page');
+      document.body.classList.add('about-page');
+      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
+      document.body.style.height = 'auto';
+      document.documentElement.style.height = 'auto';
+    });
+  </script>
+</head>
+<body class="about-page">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+  <!-- Logo Loader -->
+  <div class="logo-loader" aria-hidden="true">
+    <div class="logo-loader-container">
+      <div class="logo-loader-icon"></div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-fact">Cloud computing market is expected to reach $1,251.09 billion by 2028.</div>
+      <div class="loading-progress">Loading: 0%</div>
+    </div>
+  </div>
+  
+  <!-- Logo Watermark -->
+  <div class="logo-watermark" aria-hidden="true"></div>
+  
+  <!-- Custom cursor -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+  
+  <canvas id="animated-bg" aria-hidden="true"></canvas>
+  
+  <div class="container">
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Ali Nawaz Logo" class="logo-image">
+      </a>
+      
+      <button class="fullscreen-nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </nav>
+    
+    <!-- Fullscreen Navigation -->
+    <div class="fullscreen-nav">
+      <div class="nav-background" aria-hidden="true">
+        <div class="nav-blob"></div>
+        <div class="nav-blob"></div>
+      </div>
+      
+      <div class="nav-container">
+        <ul class="nav-items">
+          <li class="nav-item">
+            <span class="nav-item-number" aria-hidden="true">01 01 01</span>
+            <a href="index.html" class="nav-item-link">Welcome</a>
+            <div class="nav-item-background" aria-hidden="true"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number" aria-hidden="true">02 02 02</span>
+            <a href="projects.html" class="nav-item-link">Projects</a>
+            <div class="nav-item-background" aria-hidden="true"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number" aria-hidden="true">03 03 03</span>
+            <a href="about.html" class="nav-item-link active">About</a>
+            <div class="nav-item-background" aria-hidden="true"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number" aria-hidden="true">04 04 04</span>
+            <a href="contact.html" class="nav-item-link">Contact</a>
+            <div class="nav-item-background" aria-hidden="true"></div>
+          </li>
+        </ul>
+        
+        <div class="nav-social">
+          <a href="https://www.linkedin.com/in/alinawaz08/" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+          <a href="https://github.com/alirjpt" target="_blank" rel="noopener" aria-label="GitHub Profile">
+            <i class="fab fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- About Section (mirroring projects.html layout) -->
+    <section class="modern-about" id="main-content">
+      <div class="about-left">
+        <img src="assets/images/about pic.jpg" alt="Ali Nawaz, Cloud Engineer, profile picture" class="about-image profile-pic">
+      </div>
+      <div class="about-right">
+        <h1 class="about-heading">ABOUT</h1>
+        <div class="about-divider"></div>
+        <div class="about-text">
+          Hi, I'm Ali Nawaz, a Cloud Engineer passionate about designing secure, scalable, and cost-efficient infrastructure. I work with AWS services like EC2, S3, IAM, VPC, RDS, and Route 53, and I use tools such as Terraform, Docker, and GitHub Actions to automate deployments and maintain reliability.
+        </div>
+        <div class="about-text">
+          I enjoy solving problems, building practical solutions, and continuously learning new technologies to stay ahead in the cloud space. My focus is always on creating systems that are simple, reliable, and aligned with business goals.
+        </div>
+        <div class="about-text">
+          When I'm not working in the cloud, you'll probably find me gaming or traveling both of which keep me sharp, curious, and inspired.
+        </div>
+        <div class="about-text">
+          I'm always excited to connect with fellow cloud enthusiasts, discuss new technologies, and explore opportunities to collaborate on innovative projects that push the boundaries of what's possible in the cloud.
+        </div>
+        <div class="cv-link-bottom-center">
+          <a href="assets/ALI_Resume.pdf" class="cv-link" download="ALI_Resume.pdf" aria-label="Download my curriculum vitae">
+            <i class="fas fa-arrow-down" aria-hidden="true"></i> curriculum vitae
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+  <script src="loader.js"></script>
+  <script src="page-animations.js"></script>
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="barba-transitions.js"></script>
+</body>
+</html> 

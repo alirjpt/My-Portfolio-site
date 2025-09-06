@@ -1,0 +1,22 @@
+{
+  "name": "Ali Nawaz Cloud Portfolio",
+  "short_name": "CloudPortfolio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#9580FF",
+  "description": "Ali Nawaz - Cloud Engineer Portfolio showcasing cloud projects and skills.",
+  "icons": [
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <title>Projects - Cloud Portfolio</title>
+  <meta name="description" content="Explore cloud engineering and infrastructure projects showcasing expertise in AWS, Kubernetes, and DevOps">
+  <meta name="keywords" content="Cloud Engineer, DevOps, Linux, AWS, Azure, Infrastructure, Automation, Projects, Portfolio">
+  <meta name="author" content="Ali Nawaz">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#9580FF">
+  <meta property="og:title" content="Projects - Ali Nawaz Cloud Engineer">
+  <meta property="og:description" content="Explore cloud engineering and infrastructure projects by Ali Nawaz, specializing in AWS, Kubernetes, and DevOps.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/projects.html">
+  <meta property="og:image" content="https://yourwebsite.com/profile-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects - Ali Nawaz Cloud Engineer">
+  <meta name="twitter:description" content="Explore cloud engineering and infrastructure projects by Ali Nawaz, specializing in AWS, Kubernetes, and DevOps.">
+  <meta name="twitter:image" content="https://yourwebsite.com/profile-image.jpg">
+  <link rel="canonical" href="https://yourwebsite.com/projects.html">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reset.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="animated-bg.js" defer></script>
+  <style>
+    .modern-projects {
+      padding: 80px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+    
+    .project-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .project-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    .project-right {
+      padding-left: 20px;
+    }
+    
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    
+    .project-heading {
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    
+    .project-count {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    
+    .project-divider {
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 30px 0;
+      width: 100%;
+    }
+    
+    .project-list {
+      list-style: none;
+      padding: 0;
+      min-height: 400px;
+    }
+    
+    .project-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .project-name {
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+      color: var(--text-color, #fff);
+    }
+    
+    .project-name:hover {
+      transform: translateX(10px);
+    }
+    
+    .project-name i {
+      margin-right: 10px;
+      font-size: 0.8rem;
+    }
+    
+    .project-category {
+      font-size: 1rem;
+      opacity: 0.8;
+      text-align: right;
+    }
+    
+    .project-coming-soon {
+      text-align: center;
+      padding: 60px 0;
+    }
+    
+    .project-coming-soon p {
+      font-size: 1.2rem;
+      opacity: 0.7;
+      font-style: italic;
+    }
+    
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-color, #fff);
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 500;
+    }
+    
+    .github-link:hover {
+      transform: translateX(-50%) translateY(-5px);
+    }
+    
+    .github-link i {
+      font-size: 1.2rem;
+    }
+    
+    /* Mobile Responsive Design */
+    @media (max-width: 992px) {
+      .modern-projects {
+        grid-template-columns: 1fr;
+        gap: clamp(30px, 4vw, 40px);
+        padding: clamp(30px, 4vw, 60px) clamp(15px, 3vw, 20px);
+      }
+      
+      .project-heading {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        margin-bottom: clamp(20px, 3vw, 30px);
+      }
+      
+      .project-left {
+        order: -1;
+        margin-bottom: 20px;
+      }
+      
+      .project-image {
+        max-width: 100%;
+        height: clamp(300px, 50vw, 400px);
+        object-fit: cover;
+      }
+      
+      .project-right {
+        padding-left: 0;
+      }
+      
+      .project-count {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .modern-projects {
+        padding: 30px 20px;
+        gap: 30px;
+      }
+      
+      .project-heading {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        text-align: center;
+      }
+      
+      .project-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+      
+      .project-count {
+        font-size: 1.5rem;
+      }
+      
+      .project-divider {
+        margin: 20px 0;
+      }
+      
+      .project-coming-soon p {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        padding: 0 20px;
+      }
+      
+      .github-link {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 30px;
+        padding: 12px 20px;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .modern-projects {
+        padding: 25px 15px;
+        gap: 25px;
+      }
+      
+      .project-heading {
+        font-size: clamp(1.8rem, 9vw, 2.5rem);
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+      
+      .project-image {
+        height: clamp(250px, 60vw, 350px);
+      }
+      
+      .project-coming-soon {
+        padding: 40px 0;
+      }
+      
+      .project-coming-soon p {
+        font-size: 0.95rem;
+      }
+      
+      .github-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .modern-projects {
+        padding: 20px 10px;
+      }
+      
+      .project-heading {
+        font-size: 1.8rem;
+      }
+      
+      .project-coming-soon p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo Loader -->
+  <div class="logo-loader">
+    <div class="logo-loader-container">
+      <div class="logo-loader-icon"></div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-fact">Cloud computing market is expected to reach $1,251.09 billion by 2028.</div>
+      <div class="loading-progress">Loading: 0%</div>
+    </div>
+  </div>
+  
+  <!-- Logo Watermark -->
+  <div class="logo-watermark"></div>
+  
+  <!-- Custom cursor -->
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+  
+  <canvas id="animated-bg"></canvas>
+  
+  <div class="container">
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Ali Nawaz Logo" class="logo-image">
+      </a>
+      
+      <button class="fullscreen-nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </nav>
+    
+    <!-- Fullscreen Navigation -->
+    <div class="fullscreen-nav">
+      <div class="nav-background">
+        <div class="nav-blob"></div>
+        <div class="nav-blob"></div>
+      </div>
+      
+      <div class="nav-container">
+        <ul class="nav-items">
+          <li class="nav-item">
+            <span class="nav-item-number">01 01 01</span>
+            <a href="index.html" class="nav-item-link">Welcome</a>
+            <div class="nav-item-background"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number">02 02 02</span>
+            <a href="projects.html" class="nav-item-link active">Projects</a>
+            <div class="nav-item-background"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number">03 03 03</span>
+            <a href="about.html" class="nav-item-link">About</a>
+            <div class="nav-item-background"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number">04 04 04</span>
+            <a href="contact.html" class="nav-item-link">Contact</a>
+            <div class="nav-item-background"></div>
+          </li>
+        </ul>
+        
+        <div class="nav-social">
+          <a href="https://www.linkedin.com/in/alinawaz08/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/alirjpt" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modern Projects Section -->
+    <section class="modern-projects">
+      <div class="project-left">
+        <img src="https://via.placeholder.com/500x500?text=Featured+Project" alt="Featured Project, cloud engineering portfolio" class="project-image">
+      </div>
+      
+      <div class="project-right">
+        <div class="project-header">
+          <h1 class="project-heading">PROJECTS</h1>
+          <span class="project-count">0</span>
+        </div>
+        
+        <div class="project-divider"></div>
+        
+        <div class="project-list">
+          <div class="project-coming-soon">
+            <p>Projects will be added here soon</p>
+          </div>
+          
+          <!-- Example project item structure for future reference -->
+          <!--
+          <li class="project-item">
+            <a href="#" class="project-name">
+              <i class="fas fa-arrow-right"></i>
+              <span>Project Name</span>
+            </a>
+            <span class="project-category">Category</span>
+          </li>
+          -->
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- GitHub Link (Redesigned) -->
+  <a href="https://github.com/alirjpt" target="_blank" class="github-link">
+    <i class="fas fa-arrow-down"></i>
+    GitHub Profile
+  </a>
+  
+  <!-- Scripts -->
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+  <script src="loader.js"></script>
+  <script src="page-animations.js"></script>
+</body>
+</html> 

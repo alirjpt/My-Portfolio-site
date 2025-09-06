@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <title>Contact - Cloud Portfolio</title>
+  <meta name="description" content="Get in touch with a Cloud Engineer and Infrastructure Architect for cloud solutions and consulting services">
+  <meta name="keywords" content="Cloud Engineer, DevOps, Linux, AWS, Azure, Infrastructure, Automation">
+  <meta name="author" content="Ali Nawaz">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#9580FF">
+  <meta property="og:title" content="Contact Ali Nawaz - Cloud Engineer">
+  <meta property="og:description" content="Get in touch with Ali Nawaz, a Cloud Engineer passionate about building efficient infrastructure and mastering automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/contact.html">
+  <meta property="og:image" content="https://yourwebsite.com/profile-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Ali Nawaz - Cloud Engineer">
+  <meta name="twitter:description" content="Get in touch with Ali Nawaz, a Cloud Engineer passionate about building efficient infrastructure and mastering automation.">
+  <meta name="twitter:image" content="https://yourwebsite.com/profile-image.jpg">
+  <link rel="canonical" href="https://yourwebsite.com/contact.html">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reset.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="animated-bg.js" defer></script>
+  <style>
+    .contact-section {
+      padding: 100px 0;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .contact-header {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    
+    .contact-heading {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    
+    .contact-intro {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      opacity: 0.9;
+    }
+    
+    .contact-details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+    
+    .contact-item {
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .contact-icon {
+      font-size: 2rem;
+      margin-right: 20px;
+      color: var(--color-primary, #9580FF);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(149, 128, 255, 0.1);
+      border-radius: 50%;
+    }
+    
+    .contact-content {
+      flex: 1;
+    }
+    
+    .contact-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      opacity: 0.7;
+    }
+    
+    .contact-link {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--text-color);
+      position: relative;
+      transition: color 0.3s ease;
+      display: inline-block;
+      font-weight: 500;
+    }
+    
+    .contact-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-primary, #9580FF);
+      transition: width 0.3s ease;
+    }
+    
+    .contact-link:hover {
+      color: var(--color-primary, #9580FF);
+    }
+    
+    .contact-link:hover::after {
+      width: 100%;
+    }
+    
+    /* Mobile Responsive Design */
+    @media (max-width: 992px) {
+      .contact-section {
+        padding: clamp(60px, 8vw, 100px) 0;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      
+      .contact-header {
+        margin-bottom: clamp(40px, 6vw, 60px);
+        padding: 0 clamp(20px, 3vw, 40px);
+      }
+      
+      .contact-heading {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin-bottom: clamp(15px, 3vw, 20px);
+      }
+      
+      .contact-intro {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        padding: 0 clamp(10px, 2vw, 20px);
+      }
+      
+      .contact-details-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(20px, 3vw, 25px);
+        padding: 0 clamp(20px, 3vw, 40px);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .contact-section {
+        padding: 50px 0;
+      }
+      
+      .contact-header {
+        margin-bottom: 40px;
+        padding: 0 20px;
+      }
+      
+      .contact-heading {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        text-align: center;
+      }
+      
+      .contact-intro {
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
+        text-align: center;
+        padding: 0 15px;
+      }
+      
+      .contact-details-grid {
+        padding: 0 20px;
+        gap: 20px;
+      }
+      
+      .contact-item {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      
+      .contact-icon {
+        font-size: 1.5rem;
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+      .contact-content {
+        width: 100%;
+      }
+      
+      .contact-label {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+      
+      .contact-link {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        word-break: break-all;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .contact-section {
+        padding: 40px 0;
+      }
+      
+      .contact-header {
+        margin-bottom: 30px;
+        padding: 0 15px;
+      }
+      
+      .contact-heading {
+        font-size: clamp(1.8rem, 9vw, 2.2rem);
+        margin-bottom: 15px;
+      }
+      
+      .contact-intro {
+        font-size: 0.95rem;
+        padding: 0 10px;
+      }
+      
+      .contact-details-grid {
+        padding: 0 15px;
+        gap: 15px;
+      }
+      
+      .contact-item {
+        padding: 15px;
+        gap: 12px;
+      }
+      
+      .contact-icon {
+        font-size: 1.3rem;
+        width: 45px;
+        height: 45px;
+      }
+      
+      .contact-label {
+        font-size: 0.85rem;
+      }
+      
+      .contact-link {
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .contact-section {
+        padding: 30px 0;
+      }
+      
+      .contact-header {
+        padding: 0 10px;
+      }
+      
+      .contact-heading {
+        font-size: 1.8rem;
+      }
+      
+      .contact-intro {
+        font-size: 0.9rem;
+      }
+      
+      .contact-details-grid {
+        padding: 0 10px;
+      }
+      
+      .contact-item {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo Loader -->
+  <div class="logo-loader">
+    <div class="logo-loader-container">
+      <div class="logo-loader-icon"></div>
+      <div class="loading-bar-container">
+        <div class="loading-bar"></div>
+      </div>
+      <div class="loading-fact">Cloud computing market is expected to reach $1,251.09 billion by 2028.</div>
+      <div class="loading-progress">Loading: 0%</div>
+    </div>
+  </div>
+  
+  <!-- Logo Watermark -->
+  <div class="logo-watermark"></div>
+  
+  <!-- Custom cursor -->
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+  
+  <canvas id="animated-bg"></canvas>
+  
+  <div class="container">
+    <!-- Main Navigation -->
+    <nav class="main-navigation">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Ali Nawaz Logo" class="logo-image">
+      </a>
+      
+      <button class="fullscreen-nav-toggle" aria-label="Toggle navigation">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+    </nav>
+    
+    <!-- Fullscreen Navigation -->
+    <div class="fullscreen-nav">
+      <div class="nav-background">
+        <div class="nav-blob"></div>
+        <div class="nav-blob"></div>
+      </div>
+      
+      <div class="nav-container">
+        <ul class="nav-items">
+          <li class="nav-item">
+            <span class="nav-item-number">01 01 01</span>
+            <a href="index.html" class="nav-item-link">Welcome</a>
+            <div class="nav-item-background"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number">02 02 02</span>
+            <a href="projects.html" class="nav-item-link">Projects</a>
+            <div class="nav-item-background"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number">03 03 03</span>
+            <a href="about.html" class="nav-item-link">About</a>
+            <div class="nav-item-background"></div>
+          </li>
+          <li class="nav-item">
+            <span class="nav-item-number">04 04 04</span>
+            <a href="contact.html" class="nav-item-link active">Contact</a>
+            <div class="nav-item-background"></div>
+          </li>
+        </ul>
+        
+        <div class="nav-social">
+          <a href="https://www.linkedin.com/in/alinawaz08/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/alirjpt" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-header">
+        <h1 class="contact-heading">Let's Connect</h1>
+        <p class="contact-intro">I'd love to hear from you! Whether it's about a project, opportunity, or just to say hi. Feel free to reach out through any of the channels below.</p>
+      </div>
+      
+      <div class="contact-details-grid">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-content">
+            <div class="contact-label">Email</div>
+            <a href="mailto:alinawaz9912@gmail.com" class="contact-link">alinawaz9912@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="contact-content">
+            <div class="contact-label">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/alinawaz08/" target="_blank" class="contact-link">linkedin.com/in/alinawaz08</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-content">
+            <div class="contact-label">GitHub</div>
+            <a href="https://github.com/alirjpt" target="_blank" class="contact-link">github.com/alirjpt</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="contact-content">
+            <div class="contact-label">Phone</div>
+            <a href="tel:+923216338923" class="contact-link">+92 321 6338923</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+  <script src="loader.js"></script>
+  <script src="page-animations.js"></script>
+</body>
+</html> 
