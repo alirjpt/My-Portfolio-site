@@ -1,30 +1,53 @@
-<<<<<<< HEAD
-# My-Portfolio-site
-Personal portfolio website built with. Showcases my projects, skills, and experience. Deployed on Netlify with a custom domain.  Features:  Responsive design for desktop and mobile  Projects and achievements section  About me and contact details  Fast and lightweight build  Deployment: Live at https://alinawaz.cloud
-=======
-# Ali Nawaz – Portfolio Website
+Portfolio Website Deployment on AWS
 
-This is my personal portfolio website built with [your tech stack, e.g. HTML, CSS, JavaScript / React].  
-It showcases my projects, skills, and experience. Deployed on Netlify with a custom domain.
+This is my personal portfolio website deployed entirely on AWS Cloud as part of my cloud engineering journey. The goal was to learn how to connect core AWS services together and deliver a fully functional, secure, and globally available website.
 
-## 🔗 Live Demo
-[Visit my portfolio](https://alinawaz.cloud)
+🔗 Live Website → alinawaz.cloud
 
-## ✨ Features
-- Responsive design (mobile + desktop)
-- About me section
-- Projects and achievements
-- Contact form / details
-- Fast and lightweight
+- Services Used
 
-## 🛠️ Tech Stack
-- HTML, CSS, JavaScript
-- [React / Next.js / etc. if used]
-- Netlify (deployment)
+Amazon S3 → Static website hosting for HTML, CSS, JS, and assets.
 
-## 🚀 Deployment
-Deployed on Netlify. Every commit to the main branch updates the live site automatically.
+Amazon CloudFront → Content Delivery Network (CDN) to serve the site globally with low latency.
 
-## 📜 License
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
->>>>>>> 4d4b873 (Initial commit: portfolio site)
+AWS Certificate Manager (ACM) → Free SSL/TLS certificate for HTTPS.
+
+Amazon Route 53 → Domain registration and DNS routing.
+
+ -Architecture
+![aws_static_site_architecture_explained](https://github.com/user-attachments/assets/572d400b-cefc-4215-8002-361d6cfc3842)
+
+
+(This diagram shows how S3, CloudFront, ACM, and Route 53 connect to serve the website.)
+
+- Screenshots
+
+S3 bucket hosting configuration
+
+CloudFront distribution setup
+
+SSL certificate validation
+
+Route 53 DNS records
+
+Live website preview
+
+- Key Learnings
+
+Hosting a static site on AWS S3
+
+Setting up global distribution and caching with CloudFront
+
+Adding HTTPS using ACM certificates
+
+Managing DNS with Route 53
+
+Understanding the flow of cloud services working together
+
+- Next Steps
+
+Automate deployment with Terraform (IaC)
+
+Set up a CI/CD pipeline (GitHub Actions or AWS CodePipeline)
+
+Add monitoring using AWS CloudWatch
